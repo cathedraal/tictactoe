@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 100px rgba(0, 0, 0, 0.596);
+    text-align: center;
+    width: 600px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.question {
+    margin-bottom: 0px;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.questionId {
+    color: #ffffff75;
+}
+
+.clue {
+    color: rgba(255, 255, 255, 0.541);
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.submitBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #ff5f5f70;
+    border-radius: 10px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+.submitBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.result {
+    color: #ffffff33;
+    margin-bottom: 0px;
+}
+
+.seeFinalResultsBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #ff5f5f70;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+}
+
+.seeFinalResultsBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.inputField {
+    background-color: #00000046;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 20px 0px;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    margin-top: 50px;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: #0000003a;
+    transition: transform 0.3s ease;
+}
+
+.inputField:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+    border-width: 0px;
+    transform: scale(1.05);
+}
+
+.nextQuestionBtn {
+    padding: 10px 30px;
+    border: none;
+    font-size: 18px;
+    background-color: #ff5f5f70;
+    border-radius: 10px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 70px
+}
+
+.nextQuestionBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.correctUserAnswer {
+    font-size: 25px;
+    color: #88cc90;
+}
+
+.falseUserAnswer {
+    font-size: 25px;
+    color: #c46161;
+}
+
+.displayedUserAnswer {
+    font-size: 20px;
+    color: #ffffff60;
+}
+
+.imgQuiz {
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    filter: blur(15px);
+    width: 500px;
+    transition: all 0.7s ease;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.281);
+}
+
+.imgQuiz:hover {
+    width: 520px;
+    filter: blur(7px);
+}
+
+.imgLoser {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    filter: blur(15px);
+    transition: all 0.3s ease;
+    width: 500px;
+}
+
+.imgLoser:hover {
+    width: 550px;
+    filter: blur(0px);
+}
+
+.imgCongrats {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    filter: blur(15px);
+    transition: all 0.3s ease;
+    width: 400px;
+}
+
+.imgCongrats:hover {
+    width: 450px;
+    filter: blur(0px);
+}
+
+.menuButton-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menuYesBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #ff5f5f70;
+    border-radius: 10px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 50px;
+}
+
+.menuYesBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.menuNoBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 50px;
+}
+
+.menuNoBtn:hover {
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.menuHeader {
+    color: #cfcfcf;
+    margin-bottom: 0px;
+}
+
+.menuDescription {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: #777777;
+    width: 300px;
+}
+
+.finalResultButtonRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.streakDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+}
+
+.streakIcon {
+    transform: rotate(-20deg);
+    transition: all 0.5s ease;
+}
+
+.streakText {
+    color: #a7a7a7;
+    font-size: 20px;
+}
+
+.menuBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #ff5f5f70;
+    border-radius: 10px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+.menuBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.restartBtn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 50px;
+}
+
+.restartBtn:hover {
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.315);
+    transform: translateY(-2px) scale(1.1); 
+}
+
+.progress-container {
+    margin-top: 20px;
+    width: 50%;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #d85555;
+    transition: width 1s linear;
+}
+
+.finalResult {
+    margin-bottom: 0px;
+    color: #c9c9c9;
+}
+
+.comment {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: #858585;
+    font-size: 20px;
+}
+
+.displayedUserAnswer {
+    margin-top: 0px;
+    display: flex;
+    word-break: break-all;
+}
+
+.answerDiv {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+}
+
+.correctIcon {
+    display: flex;
+    width: 50px;
+}
+
+.falseIcon {
+    display: flex;
+    width: 50px;
+}
